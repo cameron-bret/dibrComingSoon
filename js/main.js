@@ -1,3 +1,42 @@
+// countdown timer
+import TimezZ from "timezz";
+
+const timer = new TimezZ(".j-first-timer", {
+  date: "Dec 02, 2013 00:00:00",
+  text: {
+    days: " days",
+    hours: " hours",
+    minutes: " minutes",
+    seconds: " seconds"
+  },
+  canContinue: true,
+  template: "<span>NUMBER</span><i>LETTER</i> "
+});
+
+const timer2 = new TimezZ(".j-second-timer", {
+  date: "May 27, 1996",
+
+  finished() {
+    console.log("finished");
+  }
+});
+
+const timer3 = new TimezZ(".j-third-timer", {
+  date: "Jan 01, 2025",
+  template: "<div>NUMBER<span>LETTER</span></div>",
+
+  beforeDestroy() {
+    console.log("destroyed");
+  }
+});
+
+setTimeout(() => {
+  timer3.destroy();
+}, 10000);
+
+
+
+//   include
 
 (function ($) {
     "use strict";
