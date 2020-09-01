@@ -11,6 +11,11 @@ body {
   font-family: sans-serif;
 }
 
+li {
+  list-style-type: disc;
+  margin-left: 150px;
+}
+
 .timer,
 .timer2,
 .timer3 {
